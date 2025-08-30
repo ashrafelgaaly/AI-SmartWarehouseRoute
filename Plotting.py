@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 
 
-def plot_route(rte, order_points, warehouse_size=(10,10)):
+def plot_route(rte, order_points, warehouse_size=(10,10), policy=''):
     fig, ax = plt.subplots(figsize=(6,6))
     ax.set_xlim(-1, warehouse_size[0])
     ax.set_ylim(-1, warehouse_size[1])
@@ -22,4 +22,5 @@ def plot_route(rte, order_points, warehouse_size=(10,10)):
     ax.scatter(rte[0][0], rte[0][1], c="orange", s=120, marker="*", label="Start")
 
     ax.legend()
+    ax.set_title(policy)
     plt.show()

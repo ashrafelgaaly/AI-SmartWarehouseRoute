@@ -14,4 +14,4 @@ if __name__ == "__main__":
         print("Total Distance:", dist)
         print("Route:", route)
 
-        plot_route(route, order_points=order, warehouse_size=warehouse_size)
+        plot_route(route, order_points=order, warehouse_size=warehouse_size, policy=policy)
