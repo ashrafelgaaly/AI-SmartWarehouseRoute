@@ -1,14 +1,14 @@
 
 from warehouse import WarehouseGrid
-from policies import naive_rte, greedy_rte, tsp_heur_rte, q_learning_rte
+from policies import simple_rte, greedy_rte, tsp_heur_rte, q_learning_rte
 
 
-def generate_rte(order, policy="naive", start=(0, 0), episodes=500, speed=1):
+def generate_rte(order, policy="q-learning", start=(0, 0), episodes=10000, speed=1):
     current_node = start
     rte = [start]
 
-    if policy == "naive":
-        visit_order = naive_rte(order, start)
+    if policy == "simple":
+        visit_order = simple_rte(order, start)
     elif policy == "greedy":
         visit_order = greedy_rte(order, start)
     elif policy == "tsp":

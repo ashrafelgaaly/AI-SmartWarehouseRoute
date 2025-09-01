@@ -7,7 +7,7 @@ if __name__ == "__main__":
     start = (7, 7)
     order = [(2, 2), (4, 1), (1, 5), (6, 4), (9, 3)]
 
-    for policy in ["naive", "greedy", "tsp", "q-learning"]:
+    for policy in ["simple", "greedy", "tsp", "q-learning"]:
         time, dist, route = generate_rte(order, policy=policy, start=start, episodes=500)
         print(f"\nPolicy: {policy}")
         print("Total Time:", time)

@@ -24,7 +24,7 @@ The picker starts at some node, moves on a grid to collect items, and we measure
 
 ## Type of Routes
 
-- Naive policy (pick the items in given order)
+- Simple policy (pick the items in given order)
 
 - Greedy policy (pick the items in nearest node)
 

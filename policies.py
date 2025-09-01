@@ -4,7 +4,7 @@ import random
 from warehouse import WarehouseGrid
 
 
-def naive_rte(order, start):
+def simple_rte(order, start):
     return order[:]
 
 
@@ -80,7 +80,7 @@ class QLearningAgent:
         return rte
 
 
-def q_learning_rte(order, start, episodes=500):
+def q_learning_rte(order, start, episodes=10000):
     agent = QLearningAgent(order, start)
     for _ in range(episodes):
         agent.learn_episode()
